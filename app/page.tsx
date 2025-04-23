@@ -1,28 +1,10 @@
-/**
- * # app/page.tsx
- * * Página principal de la aplicación.
- *   Implementa un diseño centrado y responsive para el contenido inicial.
- */
+import { TablaEstudiantes } from "../components/tabla-estudiantes";
 
-/**
- * # Página de Inicio
- * 
- * ## Descripción:
- * Componente que representa la página principal de la aplicación.
- * 
- * ## Características
- * - Diseño centrado verticalmente
- * - Altura dinámica (ajustada al navbar)
- * - Estructura responsive
- * - Implementado como React Server Component por defecto
- * 
- * ## Uso:
- * Este componente se carga automáticamente como ruta principal ('/')
- */
-export default function Home(): React.ReactElement {
+export default function Home() {
   return (
-    <div className="flex min-h-[calc(100vh-5rem)] flex-col items-center justify-center">
-      <h1>Mi Negocio</h1>
-    </div>
+    <main className="container mx-auto py-10">
+      <h1 className="text-2xl font-bold mb-4">Lista de Estudiantes</h1>
+      <TablaEstudiantes />
+    </main>
   );
 }

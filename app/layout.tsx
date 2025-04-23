@@ -7,7 +7,8 @@
 import { ThemeProvider } from "../components/theme/theme-provider"
 import type { Metadata } from "next";
 import { Navbar } from "../components/layout/navbar";
-import "@/styles/globals.css"; 
+import "@/styles/globals.css";
+import Provider from "@/components/provider";
 
 /**
  * * Metadatos globales de la aplicación.
@@ -66,6 +67,7 @@ type RootLayoutProps = Readonly<{
  * @see {@link Navbar} - Barra de navegación principal
  */
 export default function RootLayout({ children }: RootLayoutProps): React.ReactElement {
+  
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
@@ -78,7 +80,11 @@ export default function RootLayout({ children }: RootLayoutProps): React.ReactEl
         >
           <div className="relative flex min-h-screen flex-col">
             <Navbar />
-            <main className="flex-1">{children}</main>
+            <main className="flex-1">
+              <Provider>
+                {children}
+              </Provider>
+            </main>
           </div>
         </ThemeProvider>
       </body>

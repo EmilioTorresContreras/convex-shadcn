@@ -39,3 +39,10 @@ my-business/
 
 ---
 Desarrollado con Next.js y TypeScript
+
+## Instalación de Convex
+``pnpm add convex``
+``pnpm dlx convex dev
+
+## Instalación de Shadcn 
+pnpm dlx shadcn@latest add table
