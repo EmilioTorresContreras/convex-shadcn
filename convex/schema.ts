@@ -7,6 +7,6 @@ export default defineSchema({
     nombre: v.string(),
     correo: v.string(),
     carrera: v.string(),
-    grado: v.string()
+    grado: v.string(),
   }),
 });
