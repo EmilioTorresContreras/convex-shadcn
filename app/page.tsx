@@ -1,9 +1,15 @@
-import { TablaEstudiantes } from "../components/tabla-estudiantes";
+import { TablaMaestros } from "@/components/maestros/tabla-maestros";
+import { TablaEstudiantes } from "../components/estudiantes/tabla-estudiantes";
 
 export default function Home() {
   return (
-    <main className="container mx-auto py-10">
-      <TablaEstudiantes />
+    <main>
+      <div className="container mx-auto py-5">
+        <TablaEstudiantes />
+      </div>
+      <div className="container mx-auto py-5">
+        <TablaMaestros />
+      </div>
     </main>
   );
 }

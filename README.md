@@ -46,3 +46,12 @@ Desarrollado con Next.js y TypeScript
 
 ## Instalación de Shadcn 
 pnpm dlx shadcn@latest add table
+
+term
+: definition
+    ~~The world is flat.~~
+    - [x] Write the press release
+    - [ ] Update the website
+    - [ ] Contact the media
+
+

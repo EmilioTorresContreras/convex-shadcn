@@ -9,4 +9,13 @@ export default defineSchema({
     carrera: v.string(),
     grado: v.string(),
   }),
+
+  maestros: defineTable({
+    numMaestro: v.string(),
+    nombre: v.string(),
+    correo: v.string(),
+    departamento: v.string(),
+    estatus: v.boolean()
+  }),
+
 });

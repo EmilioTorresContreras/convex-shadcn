@@ -48,7 +48,7 @@ export function TablaEstudiantes() {
   }
 
   return (
-    <div className="rounded-md border">
+    <div className="rounded-md border p-4">
       <div className="flex flex-col p-4">
         <div className="flex justify-between p-4">
           <p className="text-lg font-semibold">Lista de Estudiantes</p>
