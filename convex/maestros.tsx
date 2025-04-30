@@ -1,6 +1,14 @@
 import { mutation, query } from "./_generated/server";
 import { v } from "convex/values";
 
+// Obtener un maestro específico por su ID
+export const obtenerMaestroPorId = query({
+  args: { id: v.id("maestros") },
+  handler: async (ctx, args) => {
+    return await ctx.db.get(args.id);
+  },
+});
+
 // Crear un nuevo maestro (mutation)
 export const crearMaestro = mutation({
   args: {

@@ -55,3 +55,5 @@ term
     - [ ] Contact the media
 
 
+# Zod
+pnpm add zod

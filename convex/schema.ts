@@ -8,6 +8,7 @@ export default defineSchema({
     correo: v.string(),
     carrera: v.string(),
     grado: v.string(),
+    edad: v.string()
   }),
 
   maestros: defineTable({

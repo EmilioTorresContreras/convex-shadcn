@@ -4,11 +4,12 @@
  *   Incluye: proveedor de temas, barra de navegación y contenido principal.
  */
 
-import { ThemeProvider } from "../components/theme/theme-provider"
+import { ThemeProvider } from "@/app/_styles/components/theme/theme-provider"
 import type { Metadata } from "next";
-import { Navbar } from "../components/layout/navbar";
-import "@/styles/globals.css";
-import Provider from "@/components/provider";
+import { Navbar } from "@/app/_styles/components/layout/navbar";
+import "@/app/_styles/globals.css";
+import Provider from "@/app/_styles/components/provider";
+import { Footer } from "@/app/_styles/components/layout/footer";
 
 /**
  * * Metadatos globales de la aplicación.
@@ -16,8 +17,8 @@ import Provider from "@/components/provider";
  * @see https://nextjs.org/docs/app/api-reference/functions/generate-metadata
  */
 export const metadata: Metadata = {
-  title: "Mi Negocio",
-  description: "WebApp para gestionar mi negocio",
+  title: "Escuela Limón",
+  description: "WebApp para gestionar mi escuela",
   icons: {
     icon: "/favicon.ico",
   },
@@ -85,6 +86,7 @@ export default function RootLayout({ children }: RootLayoutProps): React.ReactEl
                 {children}
               </Provider>
             </main>
+            <Footer/>
           </div>
         </ThemeProvider>
       </body>

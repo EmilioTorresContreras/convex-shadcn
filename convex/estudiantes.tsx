@@ -9,9 +9,22 @@ export const crearEstudiante = mutation({
     correo: v.string(),
     carrera: v.string(),
     grado: v.string(),
+    edad: v.string()
   },
   handler: async (ctx, args) => {
     return await ctx.db.insert("estudiantes", args);
+  },
+});
+
+// Obtener un estudiante específico por su ID
+export const obtenerEstudiantePorId = query({
+  args: { id: v.id("estudiantes") },
+  handler: async (ctx, args) => {
+    const estudiante = await ctx.db.get(args.id)
+    if (!estudiante) {
+      return null
+    }
+    return estudiante
   },
 });
 
@@ -32,6 +45,7 @@ export const actualizarEstudiante = mutation({
     correo: v.string(),
     carrera: v.string(),
     grado: v.string(),
+    edad: v.string()
   },
   handler: async (ctx, args) => {
     const { id, ...data } = args;
