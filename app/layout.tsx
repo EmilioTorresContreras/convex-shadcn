@@ -6,10 +6,8 @@
 
 import { ThemeProvider } from "@/app/_styles/components/theme/theme-provider"
 import type { Metadata } from "next";
-import { Navbar } from "@/app/_styles/components/layout/navbar";
 import "@/app/_styles/globals.css";
 import Provider from "@/app/_styles/components/provider";
-import { Footer } from "@/app/_styles/components/layout/footer";
 
 /**
  * * Metadatos globales de la aplicación.
@@ -80,13 +78,11 @@ export default function RootLayout({ children }: RootLayoutProps): React.ReactEl
           disableTransitionOnChange
         >
           <div className="relative flex min-h-screen flex-col">
-            <Navbar />
             <main className="flex-1">
               <Provider>
                 {children}
               </Provider>
             </main>
-            <Footer/>
           </div>
         </ThemeProvider>
       </body>

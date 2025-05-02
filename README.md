@@ -56,4 +56,26 @@ term
 
 
 # Zod
-pnpm add zod
+``pnpm add zod``
+``pnpm add react-hook-form @hookform/resolvers``
+### Instala Clerk UI
+
+``pnpm add @clerk/themes``
+
+### Instala Clerk Lenguajes
+
+``pnpm add @clerk/localizations``
+## Convex
+
+``pnpm add convex``
+``pnpm dlx convex dev``
+
+<!-- ## Iconos
+``pnpm add react-icons`` -->
+
+## Instalar Shadcn
+``pnpm dlx shadcn@latest add sheet``
+
+
+# Para ver si hay algún error: 
+``pnpm run lint``
